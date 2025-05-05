@@ -1,0 +1,32 @@
+/* From Uiverse.io by Spacious74 */ 
+.container {
+	position: relative;
+	width: 360px;
+	margin-top: 20px; /* Adjust this if needed to give space at the top */
+	display: flex;
+	flex-direction: column; /* Stack the child elements vertically */
+	align-items: center; /* Center the children horizontally */}
+  
+  .container > * {
+	width: 340px;
+	height: 120px;
+	border: solid 1px #bebebe;
+	background-color: #3F468F;
+	position: absolute;
+	border-radius: 10px;
+	padding: 10px;
+	color: #fff;
+	box-shadow: 0px 8px 20px -10px #bbbbbb;
+	text-shadow: 0px 0px 5px #fff;
+	letter-spacing: 1px;
+	background-image: radial-gradient(circle 160px at 50% 120%, #7882f5, #000435);
+  }
+  
+  .card1 {
+	width: 300px;
+	margin: -20px 0px 0px 20px;
+  }
+  .card2 {
+	width: 320px;
+	margin: -10px 0px 0px 10px;
+  }

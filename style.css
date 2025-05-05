@@ -1,0 +1,82 @@
+/* style.css */
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url('images/RED.png');
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	color: black;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	padding-top: 20px;
+  }
+  h1 {
+	color: #FDE3EC;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	text-align: center;
+  }
+  
+  .corner-gif {
+	position: absolute;
+	width: 100px;
+	height: auto;
+	z-index: 10;
+  }
+  
+  .top-left {
+	top: 10px;
+	left: 10px;
+  }
+  
+  .top-right {
+	top: 10px;
+	right: 10px;
+  }
+  
+  .center-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+  }
+  
+  .center-gif {
+	width: 250px;
+	height: auto;
+  }  
+
+
+  .click-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+}
+
+
+#musicImage {
+	width: 200px;
+	cursor: pointer;
+}
+
+.button-music-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px; /* space between button and music icon */
+	margin-top: 30px;
+}
+
+.music-icon {
+	width: 50px;
+	cursor: pointer;
+	transition: transform 0.2s;
+}
+
+.music-icon:hover {
+	transform: scale(1.1);
+}

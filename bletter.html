@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Birthday Message</title>
+  <link rel="stylesheet" href="message.css">
+  <link rel="stylesheet" href="card.css">
+  <link rel="shortcut icon" href="images/favicon (6).ico" type="image/x-icon">
+</head>
+<body>
+
+	<div class="center-content">
+		<div class="book">
+			<p>Happy Birthday, my love.
+				You are my joy, my peace, my favorite person.
+				I’m so lucky to have you.
+				Wishing you all the happiness you deserve.
+				
+				Forever yours.</p>
+			<div class="cover">
+				<div class="container">
+					<img src="images/mailly.gif" alt="">
+				</div>
+			</div>
+		   </div>
+
+	</div>
+
+  <script>
+    // Check if music was playing before, and resume it
+    window.onload = function() {
+        if (sessionStorage.getItem("musicPlaying") === "true") {
+            var audio = document.getElementById("birthdayMusic");
+            audio.play(); // Resume playing music
+        }
+    }
+</script>
+
+<!-- Audio for local file -->
+<audio id="birthdayMusic" preload="auto">
+    <source src="birthday song.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+
+</body>
+</html>

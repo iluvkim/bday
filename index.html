@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My GIF Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="uiverse-button.css">
+  <link rel="stylesheet" href="cards.css">
+  <link rel="shortcut icon" href="images/favicon (6).ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- From Uiverse.io by Spacious74 --> 
+<div class="container">
+	<div class="card1"></div>
+	<div class="card2"></div>
+	<div class="card3">
+	  <h1>HAPPY MF BIRTHDAY LOVE</h1>
+	</div>
+  </div>
+  
+
+  <img src="images/bottom left.gif" class="corner-gif top-left" alt="Top Left GIF">
+  <img src="images/rightt.gif" class="corner-gif top-right" alt="Top Right GIF">
+
+<div class="center-content">
+	<img src="images/middle.gif" class="center-gif" alt="Center GIF">
+  
+	<div class="button-music-wrapper">
+	  <a href="bcakey.html">
+		<button class="uiverse">
+		  <div class="wrapper">
+			<span>CLICK ME</span>
+			<div class="circle circle-12"></div>
+			<div class="circle circle-11"></div>
+			<div class="circle circle-10"></div>
+			<div class="circle circle-9"></div>
+			<div class="circle circle-8"></div>
+			<div class="circle circle-7"></div>
+			<div class="circle circle-6"></div>
+			<div class="circle circle-5"></div>
+			<div class="circle circle-4"></div>
+			<div class="circle circle-3"></div>
+			<div class="circle circle-2"></div>
+			<div class="circle circle-1"></div>
+		  </div>
+		</button>
+	  </a>
+	  <img id="musicImage" src="images/song.png" alt="Music Icon" onclick="playMusic()" class="music-icon">
+	</div>
+  </div>
+  
+<!-- Audio for local file -->
+<audio id="birthdayMusic" preload="auto">
+	<source src="birthday song.mp3" type="audio/mp3">
+	Your browser does not support the audio element.
+</audio>
+
+<script>
+	// Play music when image is clicked
+	function playMusic() {
+		var audio = document.getElementById("birthdayMusic");
+		var isPlaying = sessionStorage.getItem("musicPlaying");
+
+		// Only play if the music isn't already playing
+		if (!isPlaying) {
+			audio.play(); // Start playing the music
+			sessionStorage.setItem("musicPlaying", "true"); // Mark as playing
+			console.log("Music is playing.");
+		} else {
+			console.log("Music already playing.");
+		}
+	}
+
+	// Check if music is playing and resume it when the page loads
+	window.onload = function() {
+		var audio = document.getElementById("birthdayMusic");
+		if (sessionStorage.getItem("musicPlaying") === "true") {
+			audio.play(); // Resume playing music if it was playing before
+			console.log("Resumed music.");
+		}
+	}
+</script>
+
+
+</body>
+</html>
